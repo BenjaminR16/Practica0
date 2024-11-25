@@ -36,4 +36,8 @@ public class crashregister extends AppCompatActivity {
     public void toast(){
         Toast.makeText(this, "Account ready!", Toast.LENGTH_SHORT).show();
     }
+
+    public void pass(){
+        Toast.makeText(this, "Contraseña creada!", Toast.LENGTH_SHORT).show();
+    }
 }
