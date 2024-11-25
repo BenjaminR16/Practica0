@@ -1,6 +1,8 @@
 package com.ben.climatecrash;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.widget.ImageView;
 
 import androidx.activity.EdgeToEdge;
@@ -24,20 +26,26 @@ public class Splash extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_splash);
 
-        // Configurar la imagen de fondo con Glide
         fondo = findViewById(R.id.fondo);
         Glide.with(this)
-                .load("https://images.unsplash.com/photo-1587513868965-0c8f1d6d1f3f") // URL de ejemplo
+                .load("https://images.unsplash.com/photo-1587513868965-0c8f1d6d1f3f")
                 .transition(DrawableTransitionOptions.withCrossFade(600))
                 .centerCrop()
                 .into(fondo);
 
+        animationView = findViewById(R.id.animation_view);
+        animationView.playAnimation();
 
-        // Ajustar los insets para adaptarse al sistema (barras de estado y navegación)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        new Handler().postDelayed(() -> {
+            Intent intent = new Intent(Splash.this, crashregister.class);
+            startActivity(intent);
+            finish();
+        }, 4000);
     }
 }

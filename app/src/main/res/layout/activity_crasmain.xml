@@ -7,4 +7,8 @@
     android:layout_height="match_parent"
     tools:context=".Crasmain">
 
+    <include layout="@layout/toolbar_crashmain"/>
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

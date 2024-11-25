@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Button1">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">60dp</item>
+        <item name="android:textColor">@color/calm_gray</item>
+        <item name="cornerRadius">10dp</item>
+        <item name="backgroundTint">@color/calm_blue_primary</item>
+    </style>
+
+
+</resources>

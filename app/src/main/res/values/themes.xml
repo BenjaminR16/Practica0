@@ -1,9 +1,40 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
+
     <style name="Base.Theme.ClimateCrash" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+
+        <item name="android:windowIsTranslucent">true</item>
+
+        <item name="colorPrimary">@color/calm_blue_primary</item>
+        <item name="colorPrimaryVariant">@color/calm_blue_light</item>
+        <item name="colorOnPrimary">@color/calm_white</item>
+
+        <item name="colorSecondary">@color/calm_mint</item>
+        <item name="colorOnSecondary">@color/calm_white</item>
+
+        <item name="colorOnBackground">@color/calm_blue_primary</item>
+
+        <item name="colorSurface">@color/calm_white</item>
+        <item name="colorOnSurface">@color/calm_blue_primary</item>
+
+        <item name="android:statusBarColor">@color/calm_blue_primary</item>
+        <item name="android:navigationBarColor">@color/calm_gray</item>
     </style>
 
     <style name="Theme.ClimateCrash" parent="Base.Theme.ClimateCrash" />
+
+    <style name="crashThemeSplash" parent="Base.Theme.ClimateCrash">
+        <item name="android:navigationBarColor">@color/calm_gray</item>
+    </style>
+
+    <!-- Tema para Main (con AppBar) -->
+    <style name="crashThemeMain" parent="Base.Theme.ClimateCrash">
+        <item name="colorPrimary">@color/calm_blue_primary</item>
+        <item name="colorSecondary">@color/calm_orange</item>
+        <item name="android:statusBarColor">@color/calm_blue_primary</item>
+    </style>
+
+    <!-- Tema para Register (heredado de Main) -->
+    <style name="crashThemeRegister" parent="crashThemeMain">
+        <!-- Puedes agregar personalizaciones específicas aquí si lo necesitas -->
+    </style>
 </resources>

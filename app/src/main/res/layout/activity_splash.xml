@@ -29,7 +29,7 @@
             android:id="@+id/animation_view"
             android:layout_width="70dp"
             android:layout_height="70dp"
-            android:onClick="goProfile"
+            android:onClick="Crasmain"
             app:lottie_autoPlay="true"
             app:lottie_loop="true"
             app:lottie_rawRes="@raw/cloud_animation" />
