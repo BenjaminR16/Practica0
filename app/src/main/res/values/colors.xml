@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="calm_blue_primary">#3A7CA5</color>
+    <color name="calm_blue_light">#86C5DA</color>
+    <color name="calm_white">#FFFFFF</color>
+    <color name="calm_gray">#E5E5E5</color>
+    <color name="calm_mint">#A9D6C2</color>
+    <color name="calm_lavender">#9A8CC4</color>
+    <color name="calm_orange">#F4A261</color>
+
 </resources>
