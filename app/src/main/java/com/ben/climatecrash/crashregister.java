@@ -2,6 +2,7 @@ package com.ben.climatecrash;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
@@ -28,16 +29,16 @@ public class crashregister extends AppCompatActivity {
 
     }
 
-    public void Openmain(){
-        Intent intent = new Intent(this, Crasmain.class);
+    public void Openmain(View view){
+        Intent intent = new Intent(crashregister.this, Crasmain.class);
         startActivity(intent);
     }
 
-    public void toast(){
+    public void toast(View view){
         Toast.makeText(this, "Account ready!", Toast.LENGTH_SHORT).show();
     }
 
-    public void pass(){
+    public void pass(View view){
         Toast.makeText(this, "Contraseña creada!", Toast.LENGTH_SHORT).show();
     }
 }

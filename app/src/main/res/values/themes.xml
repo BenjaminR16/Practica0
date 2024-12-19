@@ -35,6 +35,5 @@
 
     <!-- Tema para Register (heredado de Main) -->
     <style name="crashThemeRegister" parent="crashThemeMain">
-        <!-- Puedes agregar personalizaciones específicas aquí si lo necesitas -->
     </style>
 </resources>

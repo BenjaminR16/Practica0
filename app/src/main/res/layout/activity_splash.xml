@@ -27,8 +27,8 @@
 
         <com.airbnb.lottie.LottieAnimationView
             android:id="@+id/animation_view"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
             android:onClick="Crasmain"
             app:lottie_autoPlay="true"
             app:lottie_loop="true"

@@ -28,13 +28,16 @@ public class Splash extends AppCompatActivity {
 
         fondo = findViewById(R.id.fondo);
         Glide.with(this)
-                .load("https://images.unsplash.com/photo-1587513868965-0c8f1d6d1f3f")
-                .transition(DrawableTransitionOptions.withCrossFade(600))
+                .load("https://plus.unsplash.com/premium_photo-1669991406391-aba0cd13a391?q=80&w=1035&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+                .transition(DrawableTransitionOptions.withCrossFade(0))
                 .centerCrop()
                 .into(fondo);
 
+
         animationView = findViewById(R.id.animation_view);
         animationView.playAnimation();
+
+        openApp();
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
@@ -42,10 +45,19 @@ public class Splash extends AppCompatActivity {
             return insets;
         });
 
-        new Handler().postDelayed(() -> {
-            Intent intent = new Intent(Splash.this, crashregister.class);
-            startActivity(intent);
-            finish();
-        }, 4000);
+
+    }
+
+    private void openApp() {
+        Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                Intent intent = new Intent(Splash.this, crashregister.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(intent);
+            }
+        }, 6000);
     }
 }
